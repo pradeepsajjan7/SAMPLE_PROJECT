@@ -1,0 +1,51 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+<form action="/insert" method="post">
+    <fieldset width="100px">  
+        <legend> INSERT </legend>
+        <label> NAME </label>
+        <input type="name" name="name" value=" "> <br>
+        <label>EMAIL</label>
+        <input type="email" name="email" value=" "> <br>
+        <button type="submit" > ADD HERE</button>
+    </fieldset>
+</form>
+
+<hr>
+
+<form action="/update" method="post">
+    <fieldset width="100px">
+        <legend> UPDATE </legend>
+        <label> ENTER ID</label>
+        <input type="text" name="id"> <br>
+        <label> NAME </label>
+        <input type="name" name="name" value=" "> <br>
+        <label>EMAIL</label>
+        <input type="email" name="email" value=" "> <br>
+        <button type="submit" > UPDATE HERE</button>
+    </fieldset>
+</form>
+
+<hr>
+<form action="/delete" method="post">
+    <label> ENTER ID : </label>
+    <input type="text" name="id">
+    <button type="submit"> REMOVE </button>
+</form>
+
+<hr>
+
+<a href="/get-data"> LOAD DATA </a>
+{{#each items}}
+<div class="item">
+    <div> TITLE : {{this.name}} </div> <br>
+    <div> EMAIL : {{this.email}} </div> <br>
+</div>
+<hr>
+{{/each}}
+
+
+
+
+
+
