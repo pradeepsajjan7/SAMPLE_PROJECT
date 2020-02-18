@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-md-8">
+        <h1>LIST OF PROJECTS</h1>
+    </div>
+    <div class="col-md-4">
+        <a href="/projects/new" class="btn btn-primary">Create New</a>
+    </div>
+</div>
+
+<table>
+    <tr>
+        <th>IMAGE</th> 
+        <th>TITLE</th>
+        <th>DESCRIPTION</th>
+        <th>ACTIONS</th>
+    </tr>
+    {{#each projects}}
+    <tr>
+        <td><img src="{{images}}" width="50" height="50"></td>
+        <td>{{title}}</td>
+        <td>{{description}}</td>
+        <td>
+            <a href="/projects/{{_id}}">Details</a>
+            <a href="/projects/{{_id}}/delete">Delete</a>
+        </td>
+    </tr>
+    {{/each}}
+</table>

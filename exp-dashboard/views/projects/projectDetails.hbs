@@ -1,0 +1,28 @@
+<div>
+    {{#if success}}
+    <p class="alert-success"> PROJECT UPDATED SUCCESSFULL</p>
+    {{/if}}
+    <h1> PROJECT DETAILS </h1>
+<hr>
+<br>
+
+<form action="/projects/{{project._id}}" method="POST">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label> TITLE </label>
+            <input type="text" name="title" class="form-control" placeholder="MY PROJECT TITLE" value="{{project.title}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label> IMAGE </label> 
+            <input type="text" name="images" class="form-control" placeholder="project image url" value="{{project.images}}">
+        </div> 
+    </div>
+   
+    <div class="form-group">
+        <label> DESCRIPTION</label>
+        <textarea type="text" name="description" placeholder="Description" class="form-control" rows="5">{{project.description}}</textarea>
+    </div>   
+    
+    <button type="submit" class="btn btn-primary"> UPDATE </button>
+</form>
+</div>
